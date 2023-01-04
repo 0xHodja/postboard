@@ -98,10 +98,9 @@ export default function Rocketpool_node_distribution() {
             </i>
             <br />
             <i>
-              Code to get data:{" "}
-              <a href="#" className="text-decoration-none">
-                <i className="text-dark fa-brands fa-github"></i>
-                {" <Todo: Link>"}
+              Code to scrape data:{" "}
+              <a href="https://github.com/0xHodja/viz-data-rocketpool-node-distribution-map" className="text-decoration-none" target="_blank">
+                <i className="text-dark fa-brands fa-github"></i> Repo
               </a>
             </i>
             <hr></hr>
