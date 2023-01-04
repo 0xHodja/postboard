@@ -5,7 +5,7 @@ import * as styles from "../../styles/rocketpool_node_distribution.module.css";
 
 export default function Rocketpool_node_distribution() {
   const [includeWhalesMinipool, setIncludeWhalesMinipool] = useState(true);
-  const [localeAggregationMinipool, setLocaleAggregationMinipool] = useState(2);
+  const [localeAggregationMinipool, setLocaleAggregationMinipool] = useState(1);
 
   const [includeWhalesNode, setIncludeWhalesNode] = useState(true);
   const [localeAggregationNode, setLocaleAggregationNode] = useState(2);
@@ -132,8 +132,8 @@ export default function Rocketpool_node_distribution() {
         <div className="row mt-3">
           <div className="col">
             <hr />
-            <h3 className="text-center">Global</h3>
-            <p className="text-center mb-1">Nodes with Etc/UTC timezone are excluded from the global plot. An orange splash is plotted for each minipool created, with larger circles scaling with number of minipools.</p>
+            <h3 className="text-center">Global Minipool Map</h3>
+            <p className="text-center mb-1">Nodes with Etc/UTC timezone are excluded from the global plot. An orange splash is plotted for each minipool created, with circle intensity scaling with rate of minipool creation.</p>
             <iframe className={styles.globalview} frameborder="0" style={{ width: "100%" }} src="https://flo.uri.sh/visualisation/12345212/embed?auto=1"></iframe>
           </div>
         </div>
