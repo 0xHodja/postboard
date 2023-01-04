@@ -1,0 +1,29 @@
+@media (max-width: 575px) {
+  .globalview {
+    height: 380px;
+  }
+}
+
+@media (min-width: 576px) {
+  .globalview {
+    height: 400px;
+  }
+}
+
+@media (min-width: 780px) {
+  .globalview {
+    height: 500px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .globalview {
+    height: 700px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .globalview {
+    height: 900px;
+  }
+}
