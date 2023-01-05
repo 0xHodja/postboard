@@ -3,6 +3,8 @@ import Layout from "../../components/Layout";
 import * as styles from "../../styles/rocketpool_node_distribution.module.css";
 
 export default function Rocketpool_node_distribution() {
+  const [globalViz, setGlobalViz] = useState(1);
+
   const [includeWhalesMinipool, setIncludeWhalesMinipool] = useState(true);
   const [localeAggregationMinipool, setLocaleAggregationMinipool] = useState(2);
 
@@ -133,7 +135,15 @@ export default function Rocketpool_node_distribution() {
             <hr />
             <h3 className="text-center">Global Minipool Map</h3>
             <p className="text-center mb-1">Nodes with Etc/UTC timezone are excluded from the global plot. An orange splash is plotted for each minipool created, with circle intensity scaling with rate of minipool creation.</p>
-            <iframe title="Global" className={styles.globalview} style={{ width: "100%" }} src="https://flo.uri.sh/visualisation/12345212/embed?auto=1"></iframe>
+            <div className="mt-3 d-flex flex-row gap-3 justify-content-center align-items-center">
+              <button className={`btn btn-sm ${globalViz === 1 ? "btn-primary" : "btn-outline-primary"}`} onClick={() => setGlobalViz(1)}>
+                Animation
+              </button>
+              <button className={`btn btn-sm ${globalViz === 2 ? "btn-primary" : "btn-outline-primary"}`} onClick={() => setGlobalViz(2)}>
+                Static Heatmap
+              </button>
+            </div>
+            {globalViz === 1 ? <iframe title="Global" className={styles.globalview} style={{ width: "100%" }} src="https://flo.uri.sh/visualisation/12345212/embed?auto=1"></iframe> : <iframe title="Global" className={styles.globalview} style={{ width: "100%" }} src="https://flo.uri.sh/visualisation/12352001/embed?auto=1"></iframe>}
           </div>
         </div>
         <div className="row mt-3">
