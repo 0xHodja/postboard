@@ -4,7 +4,7 @@ import * as styles from "../../styles/rocketpool_node_distribution.module.css";
 
 export default function Rocketpool_node_distribution() {
   const [includeWhalesMinipool, setIncludeWhalesMinipool] = useState(true);
-  const [localeAggregationMinipool, setLocaleAggregationMinipool] = useState(1);
+  const [localeAggregationMinipool, setLocaleAggregationMinipool] = useState(2);
 
   const [includeWhalesNode, setIncludeWhalesNode] = useState(true);
   const [localeAggregationNode, setLocaleAggregationNode] = useState(3);
@@ -109,7 +109,7 @@ export default function Rocketpool_node_distribution() {
         </div>
         <div className="row mt-0">
           <div className="col">
-            <p>Rocketpool has a thriving global community of node operators. I thought it might be interesting to see how distributed the network of operators could be, and also the global growth of the network over time. </p>
+            <p>Rocketpool has a thriving global community of node operators. I thought it might be interesting to see how distributed the network of operators is, and also the global growth of the network over time. </p>
             <p>Timezones declared by the node operators on registration with the RocketpoolNodeManager contract were obtained and this was matched with the minipools the operators have created. Since the node timezone is an uncontrolled string, the timezone data was cleaned a little to be able to be mapped to Earthly locations, as a minority of node operators have used this as a platform to show on-chain text graffiti or declared their nodes are in space!</p>
             Some questions for giving more context to these animations:
             <ul>
