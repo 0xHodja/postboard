@@ -6,7 +6,7 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby clean && gatsby develop",
+    "develop": "gatsby develop",
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
@@ -15,12 +15,15 @@
   "dependencies": {
     "bootstrap": "^5.2.3",
     "ethers": "^5.7.2",
-    "gatsby": "^5.3.3",
+    "gatsby": "^4.24.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-spinners": "^0.13.7",
     "web3": "^1.8.1"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
