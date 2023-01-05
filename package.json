@@ -13,9 +13,11 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.3",
     "ethers": "^5.7.2",
     "gatsby": "^4.24.0",
+    "jquery": "^3.6.3",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
