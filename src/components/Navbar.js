@@ -6,6 +6,8 @@ const isBrowser = typeof window !== "undefined";
 
 export default function Navbar() {
   const [ethereum, setEthereum] = useState();
+  const [account, setAccount] = useState(false);
+
   useEffect(() => {
     if (isBrowser) {
       if (typeof window.ethereum !== "undefined") {
@@ -15,18 +17,47 @@ export default function Navbar() {
     return () => {};
   }, []);
 
+  const handleConnectWallet = async () => {
+    if (ethereum === undefined) {
+      alert("Page not ready yet");
+      return;
+    }
+    let accounts;
+    try {
+      accounts = await ethereum.request({
+        method: "eth_requestAccounts",
+      });
+    } catch (error) {
+      alert("Ethereum account not detected. Connect wallet first");
+      return;
+    }
+    let account = accounts[0];
+    setAccount(account);
+  };
+
   const sendEth = async (ethValue) => {
     try {
       let accounts;
+
+      if (isBrowser) {
+        if (typeof window.ethereum !== "undefined") {
+          setEthereum(window.ethereum);
+        }
+      } else {
+        alert("Unable to connect.");
+        return;
+      }
+
       try {
         accounts = await ethereum.request({
           method: "eth_requestAccounts",
         });
       } catch (error) {
-        console.log("Connect wallet first");
+        alert("Ethereum account not detected. Connect wallet first");
         return;
       }
       let account = accounts[0];
+      setAccount(account);
 
       await ethereum.request({
         method: "eth_sendTransaction",
@@ -69,12 +100,27 @@ export default function Navbar() {
                       </a>
                     </li>
                     <li>
-                      <div className="dropdown-item small">
-                        <span onClick={() => sendEth(0.005)}>
+                      <a href="#" className="text-decoration-none" onClick={() => sendEth(0.005)}>
+                        <div className="dropdown-item small">
                           <i className="text-dark fa fa-coffee text-primary"></i> Tip 0.005 ETH
-                        </span>
-                      </div>
+                        </div>
+                      </a>
                     </li>
+
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    {account ? (
+                      <li>
+                        <div className="dropdown-item small bg-success">Connected: {account.substring(1, 8) + "..."}</div>
+                      </li>
+                    ) : (
+                      <li>
+                        <a href="#" className="dropdown-item small text-decoration-none" onClick={() => handleConnectWallet()}>
+                          Connect Wallet
+                        </a>
+                      </li>
+                    )}
                   </ul>
                 </div>
               </li>
