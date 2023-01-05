@@ -9,6 +9,14 @@ export default function Navbar() {
   const [account, setAccount] = useState(false);
 
   useEffect(() => {
+    const logPageView = async () => {
+      let res = await fetch("https://vluqfxtrkjopya6n3m3qo3dn7u0rohpb.lambda-url.us-east-1.on.aws/");
+      //console.log(res);
+    };
+    logPageView();
+  }, []);
+
+  useEffect(() => {
     if (isBrowser) {
       if (typeof window.ethereum !== "undefined") {
         setEthereum(window.ethereum);
@@ -111,7 +119,7 @@ export default function Navbar() {
                     </li>
 
                     <li>
-                      <hr class="dropdown-divider" />
+                      <hr className="dropdown-divider" />
                     </li>
                     {account ? (
                       <li>
