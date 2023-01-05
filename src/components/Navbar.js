@@ -112,7 +112,7 @@ export default function Navbar() {
                     </li>
                     {account ? (
                       <li>
-                        <div className="dropdown-item small bg-success">Connected: {account.substring(1, 8) + "..."}</div>
+                        <div className="text-white dropdown-item small bg-success">Connected: {account.substring(1, 8) + "..."}</div>
                       </li>
                     ) : (
                       <li>
