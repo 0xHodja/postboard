@@ -9,7 +9,7 @@ export default function Home() {
         <div className="row">
           <div className="col">
             <div>
-              <Link to="/posts/rocketpool_node_distribution">Rocketpool Node Distribution</Link>
+              <Link to="/posts/rocketpool_node_distribution">Global Decentralisation of Rocketpool Nodes and Minipools</Link>
               <p>
                 2023-01-04 <br />
                 Post with some animated bar charts and maps showing global minipool and node distribution

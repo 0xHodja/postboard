@@ -84,7 +84,7 @@ export default function Rocketpool_node_distribution() {
       <div className="container">
         <div className="row mt-3">
           <div className="col text-center">
-            <h3>Global Distribution of Rocketpool Nodes and Minipools</h3>
+            <h3>Global Decentralisation of Rocketpool Nodes and Minipools</h3>
             <img className="my-3" src="https://imgur.com/7rSzR4A.png" style={{ width: "100%", height: "200px", objectFit: "cover" }}></img>
             <i>Analysis performed with data extracted on 2023-01-04</i>
             <br />
@@ -111,8 +111,7 @@ export default function Rocketpool_node_distribution() {
         </div>
         <div className="row mt-0">
           <div className="col">
-            <p>Rocketpool has a thriving global community of node operators. I thought it might be interesting to see how distributed the network of operators is, and also the global growth of the network over time. </p>
-            <p>Timezones declared by the node operators on registration with the RocketpoolNodeManager contract were obtained and this was matched with the minipools the operators have created. Since the node timezone is an uncontrolled string, the timezone data was cleaned a little to be able to be mapped to Earthly locations, as a minority of node operators have used this as a platform to show on-chain text graffiti or declared their nodes are in space!</p>
+            <p>A strength of Ethereum is in part afforded to it by its decentralisation, and rocketpool as a network of validators lends itself to giving Ethereum that strength. So, it might be interesting to see how distributed the network of operators actually is, and also visually understand the locality of the growth of the network over time. </p>
             Some questions for giving more context to these animations:
             <ul>
               <li>Where are the node operators globally?</li>
@@ -127,6 +126,7 @@ export default function Rocketpool_node_distribution() {
               </a>
               !
             </p>
+            <p>Timezones declared by the node operators on registration with the RocketpoolNodeManager contract were obtained and this was matched with the minipools the operators have created. Since the node timezone is an uncontrolled string, the timezone data was cleaned a little to be able to be mapped to Earthly locations, as a minority of node operators have used this as a platform to show on-chain text graffiti or declared their nodes are in space!</p>
             <p>Best viewed with >1400px horizontal resolution</p>
           </div>
         </div>
@@ -149,7 +149,7 @@ export default function Rocketpool_node_distribution() {
         <div className="row mt-3">
           <div className="col">
             <hr />
-            <h3 className="text-center mb-3">Count by Minipools</h3>
+            <h3 className="text-center mb-3">Count by Minipools (Validators)</h3>
             <div className="d-flex flex-row gap-3 justify-content-center align-items-center">
               Include Whales (>100 minipool Nodes):
               <button className={`btn btn-sm ${includeWhalesMinipool ? "btn-primary" : "btn-outline-primary"}`} onClick={() => setIncludeWhalesMinipool(true)}>
