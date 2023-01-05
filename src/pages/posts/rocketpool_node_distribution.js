@@ -114,8 +114,8 @@ export default function Rocketpool_node_distribution() {
             <p>A strength of Ethereum is in part afforded to it by its decentralisation, and rocketpool as a network of validators lends itself to giving Ethereum that strength. So, it might be interesting to see how distributed the network of operators actually is, and also visually understand the locality of the growth of the network over time. </p>
             Some questions for giving more context to these animations:
             <ul>
-              <li>Where are the node operators globally?</li>
-              <li>Where are the the minipools globally?</li>
+              <li>Where are the node operators globally? (An entity running one or more validators)</li>
+              <li>Where are the the minipools globally? (A minipool is a validator)</li>
               <li>How do those distributions look if the whale node operators (e.g. removing the >100 minpool nodes)?</li>
               <li>Which region/country/city grew or is growing the fastest?</li>
             </ul>
