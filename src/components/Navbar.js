@@ -19,7 +19,7 @@ export default function Navbar() {
 
   const handleConnectWallet = async () => {
     if (ethereum === undefined) {
-      alert("Page not ready yet");
+      alert("Page not ready yet, or a wallet was not detected.");
       return;
     }
     let accounts;
