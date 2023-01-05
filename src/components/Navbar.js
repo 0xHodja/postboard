@@ -1,13 +1,19 @@
 import { Link } from "gatsby";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Web3 from "web3";
 
-export default function Navbar() {
-  let ethereum;
+const isBrowser = typeof window !== "undefined";
 
-  if (typeof window.ethereum !== "undefined") {
-    ethereum = window.ethereum;
-  }
+export default function Navbar() {
+  const [ethereum, setEthereum] = useState();
+  useEffect(() => {
+    if (isBrowser) {
+      if (typeof window.ethereum !== "undefined") {
+        setEthereum(window.ethereum);
+      }
+    }
+    return () => {};
+  }, []);
 
   const sendEth = async (ethValue) => {
     try {

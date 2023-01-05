@@ -160,7 +160,7 @@ export default function Rocketpool_node_distribution() {
               </button>
             </div>
             <p className="text-center mt-3">
-              <i>Note: You can click on the legend to filter the inputs by region</i>
+              <i>Note: click on the legend to filter the inputs by region</i>
             </p>
           </div>
         </div>
