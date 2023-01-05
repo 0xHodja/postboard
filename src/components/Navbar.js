@@ -81,16 +81,19 @@ export default function Navbar() {
           <Link className="text-decoration-none navbar-brand" to="/">
             Hodja's Postboard
           </Link>
-
+          <div className="text-light text-sm">
+            <small>
+              <em>Made without permission</em>
+            </small>
+          </div>
           <div className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
             <span className="navbar-toggler-icon"></span>
           </div>
-
           <div className="collapse navbar-collapse" id="navmenu">
             <ul className="navbar-nav ms-auto gap-3">
               <li className="nav-item">
                 <div className="btn-group">
-                  <div className="btn btn-sm btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                  <div className="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
                     0xHodja.eth
                   </div>
                   <ul className="dropdown-menu p-1" style={{ minWidth: "150px" }}>
