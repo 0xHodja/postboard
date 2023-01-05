@@ -120,7 +120,7 @@ export default function Rocketpool_node_distribution() {
               <li>Which region/country/city grew or is growing the fastest?</li>
             </ul>
             <p>
-              Feel free to come chat in the Rocketpool community{" "}
+              I invite you to derive your own insights and feel free come chat in the Rocketpool community{" "}
               <a href="https://discord.gg/rocketpool" className="text-decoration-none" target="_blank" rel="noreferrer">
                 <i className="text-primary fa-brands fa-discord"></i> Discord
               </a>
