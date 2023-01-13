@@ -19,8 +19,6 @@ export default function Rocketpool_adada_profitability() {
     return () => {};
   }, []);
 
-  const getAdadaData = () => {};
-
   return (
     <Layout>
       <div className="container">
@@ -177,3 +175,13 @@ export default function Rocketpool_adada_profitability() {
     </Layout>
   );
 }
+export const Head = () => {
+  return (
+    <>
+      <title>Has Adada.eth been profitable in trading RPL?</title>
+      <meta name="description" content="Analysis of whether Adada.eth has been profitable in trading RPL" />
+      <meta property="og:image" content="https://i.imgur.com/vzUHkZD.png" />
+      <meta property="og:type" content="article" />
+    </>
+  );
+};
