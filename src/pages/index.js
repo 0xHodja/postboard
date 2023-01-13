@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 
 const blogs = [
   {
-    title: "How profitable has Adada.eth been in trading RPL?",
+    title: "Has Adada.eth been profitable in trading RPL?",
     image: "",
     link: "/posts/rocketpool_adada_profitability",
     date: "2023-01-13",
@@ -59,7 +59,7 @@ export default function Home() {
               <input ref={blogSearch} value={blogSearchText} type="text" className="form-control" placeholder="type your search terms" onChange={() => handleBlogSearch()} />
             </div>
 
-            {filteredBlogs().length == 0 ? (
+            {filteredBlogs().length === 0 ? (
               <div>No results. Adjust your search input.</div>
             ) : (
               filteredBlogs().map((x) => {
