@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../../components/Layout";
 import * as styles from "../../styles/rocketpool_node_distribution.module.css";
 
@@ -9,7 +9,24 @@ export default function Rocketpool_node_distribution() {
   const [localeAggregationMinipool, setLocaleAggregationMinipool] = useState(2);
 
   const [includeWhalesNode, setIncludeWhalesNode] = useState(true);
-  const [localeAggregationNode, setLocaleAggregationNode] = useState(3);
+  const [localeAggregationNode, setLocaleAggregationNode] = useState("loading...");
+
+  const [viewCount, setViewCount] = useState(0);
+
+  useEffect(() => {
+    const getViews = async () => {
+      try {
+        let res = await fetch("https://api.countapi.xyz/hit/0xhodja/rocketpool_node_distribution");
+        res = await res.json();
+        console.log(res);
+        setViewCount(res.value);
+      } catch (error) {
+        // blah
+      }
+    };
+    getViews();
+    return () => {};
+  }, []);
 
   const getVizMinipools = () => {
     let vizId;
@@ -86,7 +103,7 @@ export default function Rocketpool_node_distribution() {
           <div className="col text-center">
             <h3>Global Decentralisation of Rocketpool Nodes and Minipools</h3>
             <img className="my-3" src="https://imgur.com/7rSzR4A.png" style={{ width: "100%", height: "200px", objectFit: "cover" }}></img>
-            <i>Analysis performed with data extracted on 2023-01-04</i>
+            <i>Analysis performed with data extracted on 2023-01-04, page loads: {viewCount} times</i>
             <br />
             <i>
               Sources:{" "}
@@ -105,7 +122,6 @@ export default function Rocketpool_node_distribution() {
                 <i className="text-dark fa-brands fa-github"></i> Repo
               </a>
             </i>
-
             <hr></hr>
           </div>
         </div>
