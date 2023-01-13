@@ -7,7 +7,7 @@ export default function Rocketpool_adada_profitability() {
   useEffect(() => {
     const getViews = async () => {
       try {
-        let res = await fetch("https://api.countapi.xyz/hit/0xhodja/rocketpool_adada_profitability");
+        let res = await fetch("https://api.countapi.xyz/hit/0xhodja/rocketpool_adada_profitability_2");
         res = await res.json();
         console.log(res);
         setViewCount(res.value);
@@ -182,6 +182,7 @@ export const Head = () => {
       <meta name="description" content="Analysis of whether Adada.eth has been profitable in trading RPL" />
       <meta property="og:image" content="https://i.imgur.com/vzUHkZD.png" />
       <meta property="og:type" content="article" />
+      <meta name="twitter:card" content="summary_large_image" />
     </>
   );
 };
