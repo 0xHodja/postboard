@@ -64,7 +64,7 @@ export default function Home() {
             ) : (
               filteredBlogs().map((x) => {
                 return (
-                  <div className="border border-1 rounded-2 p-3 my-3 bg-light">
+                  <div className="border border-1 rounded-2 p-3 my-3 bg-light" key={x.link}>
                     <Link to={x.link}>
                       <h5 className="my-0">{x.title}</h5>
                     </Link>
