@@ -28,9 +28,8 @@ export default function Rocketpool_adada_profitability() {
           <div className="col text-center">
             <h3>Has Adada.eth been profitable in trading RPL?</h3>
             <img className="my-3" src="https://i.imgur.com/vzUHkZD.png" style={{ width: "100%", height: "300px", objectFit: "cover" }}></img>
-            <i>Commentary written on 2023-01-13</i>
-            <br />
-            <i>Analysis shown is with live data, page loads: {viewCount}</i>
+            <i>Commentary written based on data snapshot on 2023-01-13</i>
+            <i>, page loads: {viewCount}</i>
             <br />
             <i>
               Sources:{" "}
