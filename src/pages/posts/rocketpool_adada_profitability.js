@@ -87,7 +87,7 @@ export default function Rocketpool_adada_profitability() {
               <li>
                 Calculate the cost basis of those transactions in USD
                 <ul>
-                  <li>For transactions performed against ETH, resolve the ETH price value during that block by comparing with other DEX trades</li>
+                  <li>For transactions performed against ETH, resolve the ETH price value based on the daily close (a simplification)</li>
                 </ul>
               </li>
               <li>Present metrics such as volume, cost basis, profitability</li>
