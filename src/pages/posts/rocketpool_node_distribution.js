@@ -9,9 +9,9 @@ export default function Rocketpool_node_distribution() {
   const [localeAggregationMinipool, setLocaleAggregationMinipool] = useState(2);
 
   const [includeWhalesNode, setIncludeWhalesNode] = useState(true);
-  const [localeAggregationNode, setLocaleAggregationNode] = useState("loading...");
+  const [localeAggregationNode, setLocaleAggregationNode] = useState(3);
 
-  const [viewCount, setViewCount] = useState(0);
+  const [viewCount, setViewCount] = useState("loading...");
 
   useEffect(() => {
     const getViews = async () => {
@@ -103,7 +103,7 @@ export default function Rocketpool_node_distribution() {
           <div className="col text-center">
             <h3>Global Decentralisation of Rocketpool Nodes and Minipools</h3>
             <img className="my-3" src="https://imgur.com/7rSzR4A.png" style={{ width: "100%", height: "200px", objectFit: "cover" }}></img>
-            <i>Analysis performed with data extracted on 2023-01-04, page loads: {viewCount} times</i>
+            <i>Analysis performed with data extracted on 2023-01-04, page loads: {viewCount}</i>
             <br />
             <i>
               Sources:{" "}
