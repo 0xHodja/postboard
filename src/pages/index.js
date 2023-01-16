@@ -17,6 +17,13 @@ const blogs = [
     date: "2023-01-04",
     blurb: "Post with some animated bar charts and maps showing global minipool and node distribution",
   },
+  {
+    title: "Tribute to the development of Rocket Pool",
+    image: "",
+    link: "/posts/rocketpool_core_dev_tribute",
+    date: "2022-12-07",
+    blurb: "Video tribute to the development of the Rocketpool",
+  },
 ];
 
 export default function Home() {
