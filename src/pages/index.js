@@ -4,6 +4,13 @@ import Layout from "../components/Layout";
 
 const blogs = [
   {
+    title: "What does it cost ODAO in gas fees for their on-chain functions?",
+    image: "",
+    link: "/posts/rocketpool_odao_gas_costs_2023_01_26",
+    date: "2023-01-26",
+    blurb: "Analysis of ODAO gas costs",
+  },
+  {
     title: "Has Adada.eth been profitable in trading RPL?",
     image: "",
     link: "/posts/rocketpool_adada_profitability",
