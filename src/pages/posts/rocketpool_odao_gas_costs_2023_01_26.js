@@ -64,9 +64,43 @@ export default function Rocketpool_odao_gas_costs_2023_01_26() {
             <p>
               <b>Some initial insights:</b>
             </p>
+            <div className="d-flex flex-row justify-content-center">
+              <table className="table table-sm table-bordered table-hover" style={{ maxWidth: "800px" }}>
+                <thead>
+                  <tr>
+                    <th>Parameter</th>
+                    <th>ETH</th>
+                    <th>USD</th>
+                    <th>RPL</th>
+                    <th>GigaGas (10^9)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Total Gas Costs for current active ODAO set since 2021-01-10</td>
+                    <td>51.29</td>
+                    <td>137,900</td>
+                    <td>4,428</td>
+                    <td>1.176</td>
+                  </tr>
+                  <tr>
+                    <td>CY22 Total Annual Costs</td>
+                    <td>39.39</td>
+                    <td>94,464</td>
+                    <td>3,429</td>
+                    <td>0.9968</td>
+                  </tr>
+                  <tr>
+                    <td>CY22 Total Annual Costs Per Node</td>
+                    <td>3.16</td>
+                    <td>7,707</td>
+                    <td>278</td>
+                    <td>0.07605</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <ul>
-              <li>Total Spent by all ODAO nodes on executing these 4 functions is: 51.3 ETH</li>
-              <li>Since inception: The current 4 active rocketpool ODAO (labelled: 1-3,t) nodes have spent 11.38 ETH ($31400 USD, or 962 RPL)</li>
               <li>Since inception: As a single node Phiz has spent the most ETH at 5.1 ETH ($13,940 USD or 446 RPL)</li>
               <li>Peak monthly ODAO cost for all nodes was 9.8 ETH/month ($30,000 USD/month, or 856 RPL/month) in January 2022</li>
               <ul>
