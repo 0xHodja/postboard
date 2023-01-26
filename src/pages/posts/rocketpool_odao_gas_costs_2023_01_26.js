@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Layout from "../../components/Layout";
-import TableauReport from "tableau-react";
+import { Helmet } from "react-helmet";
 
 export default function Rocketpool_odao_gas_costs_2023_01_26() {
   const [viewCount, setViewCount] = useState("loading...");
@@ -10,7 +10,6 @@ export default function Rocketpool_odao_gas_costs_2023_01_26() {
       try {
         let res = await fetch("https://api.countapi.xyz/hit/0xhodja/rocketpool_odao_gas_costs_2023_01_26_v1");
         res = await res.json();
-        console.log(res);
         setViewCount(res.value);
       } catch (error) {
         // blah
@@ -20,18 +19,11 @@ export default function Rocketpool_odao_gas_costs_2023_01_26() {
     return () => {};
   }, []);
 
-  const tableau = {
-    parameters: {},
-    filters: {},
-    options: {
-      height: 900,
-      width: 1600,
-      hideTabs: false,
-    },
-  };
-
   return (
     <Layout>
+      <Helmet>
+        <script src="https://public.tableau.com/javascripts/api/viz_v1.js"></script>
+      </Helmet>
       <div className="container">
         <div className="row mt-3">
           <div className="col text-center">
@@ -91,7 +83,10 @@ export default function Rocketpool_odao_gas_costs_2023_01_26() {
               <b>Note: you will need larger than 1600x900 resolution to view</b>
             </i>
             <div className="d-flex flex-row justify-content-center">
-              <TableauReport url="https://public.tableau.com/views/RocketPoolODAOMainnetCosts/Dashboard" filters={tableau.filters} parameters={tableau.parameters} options={tableau.options} query="?:embed=yes&:comments=no&:toolbar=yes&:refresh=yes&:jsdebug=n " />
+              <object class="tableauViz" style={{ display: "none", width: "1600px", height: "927px" }}>
+                <param name="embed_code_version" value="3" />
+                <param name="name" value="RocketPoolODAOMainnetCosts&#47;Dashboard" />
+              </object>
             </div>
           </div>
         </div>

@@ -4,7 +4,6 @@ import Web3 from "web3";
 import { Modal } from "react-bootstrap";
 import "../styles/style.css";
 
-const isBrowser = typeof window !== "undefined";
 const rplTokenAddress = "0xD33526068D116cE69F19A9ee46F0bd304F21A51f";
 
 export default function Navbar() {
@@ -23,7 +22,7 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    if (isBrowser) {
+    if (typeof window !== "undefined") {
       if (typeof window.ethereum !== "undefined") {
         setEthereum(window.ethereum);
       }
@@ -53,7 +52,7 @@ export default function Navbar() {
   const sendDonation = async (token, value) => {
     try {
       // make sure web3 loaded
-      if (isBrowser) {
+      if (typeof window !== "undefined") {
         if (typeof window.ethereum !== "undefined") {
           setEthereum(window.ethereum);
         }
