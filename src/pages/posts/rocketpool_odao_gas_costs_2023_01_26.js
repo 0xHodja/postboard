@@ -65,8 +65,9 @@ export default function Rocketpool_odao_gas_costs_2023_01_26() {
               <b>Some initial insights:</b>
             </p>
             <ul>
+              <li>Total Spent by all ODAO nodes on executing these 4 functions is: 51.3 ETH</li>
+              <li>Since inception: The current 4 active rocketpool ODAO (labelled: 1-3,t) nodes have spent 11.38 ETH ($31400 USD, or 962 RPL)</li>
               <li>Since inception: As a single node Phiz has spent the most ETH at 5.1 ETH ($13,940 USD or 446 RPL)</li>
-              <li>Since inception: The current active rocketpool ODAO nodes have spent 11.38 ETH ($31400 USD, or 962 RPL)</li>
               <li>Peak monthly ODAO cost for all nodes was 9.8 ETH/month ($30,000 USD/month, or 856 RPL/month) in January 2022</li>
               <ul>
                 <li>Single node peak cost for this month was Phiz at 1.1662 ETH ($3,565, or 101 RPL)</li>
