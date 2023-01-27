@@ -129,8 +129,8 @@ export default function Rocketpool_odao_gas_costs_2023_01_26() {
 export const Head = () => {
   return (
     <>
-      <title>RocketPool ODAO On-Chain gas costs</title>
-      <meta name="description" content="Analysis of ODAO gas costs" />
+      <title>RocketPool ODAO revenue</title>
+      <meta name="description" content="Analysis of ODAO revenue" />
       <meta property="og:image" content="https://i.imgur.com/BMcYLyk.png" />
       <meta property="og:type" content="article" />
       <meta name="twitter:card" content="summary_large_image" />
