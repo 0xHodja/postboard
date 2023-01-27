@@ -65,14 +65,14 @@ export default function Rocketpool_odao_gas_costs_2023_01_26() {
                   <tr>
                     <td>Total CY22 Rewards for All of ODAO</td>
                     <td>136,014</td>
-                    <td>12,020</td>
-                    <td>22,408,810</td>
+                    <td>1,803</td>
+                    <td>3,361,321</td>
                   </tr>
                   <tr>
                     <td>Total CY22 Rewards divided by 15 Nodes</td>
                     <td>9,068</td>
-                    <td>801.3</td>
-                    <td>1,493,921</td>
+                    <td>120.2</td>
+                    <td>224,088</td>
                   </tr>
                 </tbody>
               </table>
