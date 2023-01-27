@@ -4,6 +4,13 @@ import Layout from "../components/Layout";
 
 const blogs = [
   {
+    title: "What does it currently cost the protocol to pay ODAO?",
+    image: "",
+    link: "/posts/rocketpool_odao_gas_costs_2023_01_27",
+    date: "2023-01-27",
+    blurb: "Analysis of ODAO revenue",
+  },
+  {
     title: "What does it cost ODAO in gas fees for their on-chain functions?",
     image: "",
     link: "/posts/rocketpool_odao_gas_costs_2023_01_26",
